@@ -1,0 +1,36 @@
+Java Scrpit:
+
+A linguagem JS é case sentive (faz diferença entre letras maiusculas e minusculas)
+
+-No JS o ";" é opcional
+-Você pode usar "" oi '' não é permitido misturar "' '"
+Dica: usar "texto" e 'importações'
+
+Variaveis na linguagem JS são dinâmicamente tipadas.
+-string
+- number
+- boolean
+
+-funvtion
+-object
+
+Para criar uma constante usamos: const
+Para criar uma variavel podemos usar var ou letras
+VAR(obsoleto e inseguro (redeclarar a variavel))
+usar sempre o let
+
+concatenação (união de textos com variaveis)
++ (operador de soma) !evitar (tipagem dinâmica)
+Usar crase (forma moderada e segura):
+'texto ${variavel}'
+
+____________________________________________________________________________________
+Podemos execcutar códigos JS e HTML de 2 formas:
+1)Diretamente usando tag <Scrpit></Scrpit>
+2)Criando um documento js e linkando com o html usando a tag <Scrpit src="Scrpit.js"></Scrpit>
+____________________________________________________________________________________
+Node - Plataforma que permite executar o JS fora do navegador de internet
+
+comando Node
+node -v (versão do node)
+node arquivo.js (executar o arquivo jasascript)
