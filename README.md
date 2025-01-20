@@ -1,4 +1,5 @@
-https://img.shields.io/github/license/Yessalas/JS
+![GitHub License](https://img.shields.io/github/license/Yessalas/JS)
+
 
 
 # JavaScipt
