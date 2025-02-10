@@ -34,3 +34,13 @@ Node - Plataforma que permite executar o JS fora do navegador de internet
 comando Node
 node -v (versão do node)
 node arquivo.js (executar o arquivo jasascript)
+_____________________________________________________________________________________________
+FRAMEWORK
+Um framework é um conjunto de ferramentas, bibliotecas e regras que facilita o desenvolvimento
+de software, fornecendo uma estrutura pronta para o programador. O framework define um "esqueleto" 
+do projeto, onde Você preenche com seu código, seguindo padrões já estabelecidos. Isso economiza tempo,
+evita a repetição de código e garantye boas práticas.
+um framework é como montar um hamburger em uma rede de fast food.
+Sem um framework, Você teria moer acarne assar o pão, preparar os ingredientes e criar sua própria receita do zero.
+
+ex: bootstrap (framework front - end)
