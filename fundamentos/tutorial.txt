@@ -44,3 +44,10 @@ um framework é como montar um hamburger em uma rede de fast food.
 Sem um framework, Você teria moer acarne assar o pão, preparar os ingredientes e criar sua própria receita do zero.
 
 ex: bootstrap (framework front - end)
+-------------------------------------------------------------------------
+Array ou vetor é uma estrutura de dados indexada 
+Array é uma alocação de variavel, com a diferença que ele pode armanezar vários dados.
+O array trabalha com indices, o indice sempre inicia em 0.
+Usos do array:
+- Simplificar o código
+- Estrutura de dados (manipular os dados - banco de dados)

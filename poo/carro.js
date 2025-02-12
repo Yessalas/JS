@@ -3,55 +3,69 @@
  */
 
 
-// Classe modelo para Carro
+/// Abstração (Classe Modelo)
+
 class Carro {
-    constructor(marca, modelo, ano) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ano = ano;
+    // Atributos
+    constructor(ano, cor) {
+        this.ano = ano
+        this.cor = cor
     }
-
-    // Métodos
-    exibirInfo() {
-
-        console.log("   ______");
-        console.log("  /|_||_\`.__");
-        console.log(" (   _    _ _\ ");
-        console.log("=`-(_)--(_)-'");
-        console.log(`Carro: ${this.marca} ${this.modelo}`);
-        console.log(`Ano: ${this.ano}`);
+    // Ações
+    criarCarro() {
+        console.log("------------------------------------")
+        console.log("🚗")
+        console.log(`Carro de ano: ${this.ano}`)
+        console.log(`Cor do carro: ${this.cor}`)
     }
-
     ligar() {
-        console.log(`O ${this.marca} ${this.modelo} está ligado!`);
+        console.log(`Carro do ano ${this.ano} foi ligado.`)
     }
-}
-
-// Classe Esportiva que herda de Carro
-class CarroEsportivo extends Carro {
-    constructor(marca, modelo, ano, velocidadeMax) {
-        super(marca, modelo, ano);
-        this.velocidadeMax = velocidadeMax;
+    desligado() {
+        console.log("Carro desligado")
     }
-
-
-    exibirInfo() {
-        console.log("-------------------------------------------------------");
-        console.log(`🏎️ Carro Esportivo: ${this.marca} ${this.modelo}`);
-        console.log(`Ano: ${this.ano}`);
-        console.log(`Velocidade Máxima: ${this.velocidadeMax} km/h`);
-    }
-
     acelerar() {
-        console.log(`O ${this.marca} ${this.modelo} está acelerando a ${this.velocidadeMax} km/h!`);
+        console.log("O carro acelerou VRUUUUUUUM 🚗")
     }
 }
 
-// Criando os objetos carros
-const carro1 = new Carro("Toyota", "Corolla", 2022);
-carro1.exibirInfo();
-carro1.ligar();
+// Herança (Subclasse da classe Modelo)
+class Aviao extends Carro {
+    // Atributos
+    constructor(envergadura) {
+        super(envergadura)
+        this.envergadura = envergadura
+    }
+    // Ações
+    criarAviao() {
+        console.log("------------------------------------")
+        console.log("✈️")
+        console.log(`A envergadura do avião é: ${this.envergadura}`)
+    }
+    aterrizar() {
+        console.log("o avião aterrizou 🛬")
+        }
+    
+    // Polimorfismo (Sobreescrever o método existente da classe pai)
+    acelerar() {
+        console.log("O avião acelerou 🛫")
+    }
+}
 
-const carro2 = new CarroEsportivo("Ferrari", "F8 Tributo", 2023, 340);
-carro2.exibirInfo();
-carro2.acelerar();
+// Instanciando um objeto
+const carro1 = new Carro(2020, "Vermelho")
+carro1.criarCarro()
+carro1.ligar()
+carro1.desligado()
+carro1.acelerar()
+
+const carro2 = new Carro(2010, "Azul")
+carro2.criarCarro()
+carro2.ligar()
+carro2.desligado()
+carro2.acelerar()
+
+const aviao1 = new Aviao(500)
+aviao1.criarAviao()
+aviao1.aterrizar()
+aviao1.acelerar()
