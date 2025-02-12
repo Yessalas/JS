@@ -4,68 +4,115 @@
 
 
 /// Abstração (Classe Modelo)
-
-class Carro {
-    // Atributos
-    constructor(ano, cor) {
-        this.ano = ano
+class Carros {
+    constructor(cor,ano) {
         this.cor = cor
-    }
-    // Ações
-    criarCarro() {
-        console.log("------------------------------------")
-        console.log("🚗")
-        console.log(`Carro de ano: ${this.ano}`)
-        console.log(`Cor do carro: ${this.cor}`)
-    }
-    ligar() {
-        console.log(`Carro do ano ${this.ano} foi ligado.`)
-    }
-    desligado() {
-        console.log("Carro desligado")
-    }
-    acelerar() {
-        console.log("O carro acelerou VRUUUUUUUM 🚗")
-    }
-}
-
-// Herança (Subclasse da classe Modelo)
-class Aviao extends Carro {
-    // Atributos
-    constructor(envergadura) {
-        super(envergadura)
-        this.envergadura = envergadura
-    }
-    // Ações
-    criarAviao() {
-        console.log("------------------------------------")
-        console.log("✈️")
-        console.log(`A envergadura do avião é: ${this.envergadura}`)
-    }
-    aterrizar() {
-        console.log("o avião aterrizou 🛬")
-        }
+        this.ano = ano
     
-    // Polimorfismo (Sobreescrever o método existente da classe pai)
-    acelerar() {
-        console.log("O avião acelerou 🛫")
     }
+    
+// açoes
+
+criarCarro(){
+    console.log("-------------------------------------------------------")
+    console.log("🚗")
+    console.log(`Carro ${this.cor}`)
+    console.log(`ano: ${this.ano}`)
 }
 
-// Instanciando um objeto
-const carro1 = new Carro(2020, "Vermelho")
-carro1.criarCarro()
-carro1.ligar()
-carro1.desligado()
-carro1.acelerar()
+ligar(){
+    console.log("Seu carro está ligado")
+    
+}
+desligar(){
+    console.log("Seu carro está desligado!")
+    console.log("🚗")
+}
 
-const carro2 = new Carro(2010, "Azul")
-carro2.criarCarro()
-carro2.ligar()
-carro2.desligado()
-carro2.acelerar()
 
-const aviao1 = new Aviao(500)
-aviao1.criarAviao()
-aviao1.aterrizar()
-aviao1.acelerar()
+acelerar(){
+    console.log("🚗= = = =")
+}
+}
+
+// classe modelo (iniciar sempre com letra maiuscula)
+class Fuscas {
+    constructor(cor,ano) {
+        this.cor = cor
+        this.ano = ano
+    
+    }
+    
+// açoes
+
+criarFuscas(){
+    console.log("-------------------------------------------------------")
+    console.log(" ō͡≡o ")
+    console.log(`Fusca ${this.cor}`)
+    console.log(`ano: ${this.ano}`)
+}
+
+ligar(){
+    console.log("Seu carro está ligado")
+
+}
+desligar(){
+    console.log("Seu carro está desligado!")
+    console.log(" ō͡≡o")
+}
+
+
+acelerar(){
+    console.log("== = = ō͡≡o")
+}
+}
+
+// classe modelo (iniciar sempre com letra maiuscula)
+class aviao extends Carros {
+    constructor(cor,ano, envergadura ) {
+        super(cor, ano)
+        this.envergadura = envergadura
+    
+    }
+
+    
+// açoes
+criarAviao(){
+    console.log("-------------------------------------------------------")
+    console.log(" ✈️ ")
+    console.log(`avião ${this.cor}`)
+    console.log(`ano: ${this.ano}`)
+    console.log(`envergadura: ${this.envergadura}`)
+}
+
+aterrizar(){
+    console.log("Avião aterrizando")
+    console.log("🛬")
+
+}
+
+acelerar(){
+    console.log(" ✈️")
+    console.log("____")
+    console.log("")
+}
+}
+
+    //instanciando (criando) um objeto
+const carro1 = new Carros("vermelho", 2022)
+    carro1.criarCarro()
+    carro1.ligar()
+    carro1.acelerar()
+    carro1.desligar()
+
+  //instanciando (criando) um objeto
+const fusca1 = new Fuscas("azul", 1999)
+  fusca1.criarFuscas()
+  fusca1.ligar()
+  fusca1.acelerar()
+  fusca1.desligar()
+
+const aviao1 = new aviao("azul e branco", 2022, 55)
+  aviao1.criarAviao()
+  aviao1.acelerar()
+  aviao1.aterrizar()
